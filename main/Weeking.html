@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Language" content="zh-CN">
+	<meta name="robots" content="index, follow">
+	<link href="../styles/main.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="../scripts/ribao.js"></script>				
+	<script type="text/javascript" src="../scripts/html5slider.js"></script>				
+</head>
+
+<body>
+	<div id="toptop">
+	<h1 align="center">日报提交模板</h1>
+	<span class="warning">**推荐使用<b>chrome</b>和<b>firefox</b></span>
+	<div class="date">
+	<b>日期: </b><span id="input1"></span>&nbsp &nbsp<span id="input2"></span>&nbsp &nbsp
+	<b>Name: </b><span id="name"/></span>&nbsp &nbsp
+	<b>Email: </b><span id="email"></span>
+	</div>
+	</div>
+	<div id="bottom">
+	<div id="leftpart">		
+
+	<h4>周中工作总结</h4>
+	<textarea id="textarea1" class="content" tabindex="1" title="周中工作总结" name="" node-type="textEl" style="height: 55px;" ></textarea>
+	</br>
+	</br>
+	
+	<h4>计划完成情况</h4>
+	<span class="comp">%>_<%</span> <input id="compRange" type="range" name="completionRange" min="0" max="100" step="10" value=50 /> <span class="comp">O(∩_∩)O</span>
+	</br>
+	</br>
+	
+	<h4>计划存在问题</h4>
+	<textarea id="textarea2" class="content" tabindex="2" title="计划存在问题" name="" node-type="textEl" style="height: 55px;" ></textarea>		
+	</br>
+	</br>
+	
+	<h4>计划安排调整</h4>
+	<textarea id="textarea4" class="content" tabindex="4" title="计划安排调整" name="" node-type="textEl" style="height: 55px;" ></textarea>		
+	</div>
+
+	<div id="rightpart">
+	<button class="button" name="review" type="submit" onclick="Submiting()" value="review"/><b>REVIEW</b></button></br>
+	<div id="textarea6" class="content" title="Last Time Review" name="textarea6" style="height: 200px; font-size: 12px; margin-top:20px"></div>
+	<form name="send" action="../mysqltest.php" method="post">
+	<div id="textarea5" class="content" title="Review" name="textarea5" style="height: 230px; font-size: 12px; margin-top:20px"></div>
+	<input id="txt" type="hidden" name="txt" />
+	<input id="Name" type="hidden" name="Name" />
+	<input id="Date" type="hidden" name="Date" />
+	<input class='submit' type="image" src="../resources/eg_submit.png" alt="Submit"/>
+	</form>
+	</div>
+	</div>
+</body>
+</html>
